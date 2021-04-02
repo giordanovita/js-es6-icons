@@ -108,7 +108,6 @@
     container.html('');
 
     array.forEach(element => {
-        let color;
         
         const iconHtml = `
         <div>
@@ -187,10 +186,8 @@ function filter(array, key) {
   select.change(function(event) {
     const currentType = $(this).val();
     if (types.includes(currentType)) {
-        // filtriamo l'array in base al tipo
         const filteredIcons = filter(coloredIcons, currentType);
         console.log(filteredIcons);
-        // mostrare i valori filtrati
         print(filteredIcons);
     } else {
         print(coloredIcons);
